@@ -12,6 +12,9 @@ import com.pandiaaman.springReferenceBasics.Employee;
 
 /**
  * Hello world!
+ * SPRING BEAN LIFE CYCLE
+ * Two most important methods for bean life cycle are init and destroy methods
+ * 	public void init() and public void destroy()
  *
  */
 public class App 
