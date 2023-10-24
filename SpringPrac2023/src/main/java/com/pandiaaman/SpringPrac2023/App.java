@@ -1,5 +1,7 @@
 package com.pandiaaman.SpringPrac2023;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,8 +15,17 @@ import com.pandiaaman.springReferenceBasics.Employee;
 /**
  * Hello world!
  * SPRING BEAN LIFE CYCLE
+ * Three ways of implementing life cycles : xml, interface, annotations
+ * 
+ * XML
  * Two most important methods for bean life cycle are init and destroy methods
  * 	public void init() and public void destroy()
+ * 
+ * interface
+ * POJO implements InitializingBean, DisposableBean
+ * 
+ * annotations
+ * @PostConstruct, @PreDestroy
  *
  */
 public class App 
