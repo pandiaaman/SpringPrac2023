@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/beans/spring-context.xsd">
+
+	<bean class="com.pandiaaman.springCollectionBasics.Teacher" name="teacherOne" p:teacherId="1">
+		<property name="teacherName" value="Shankar"/>
+		<property name="teacherEmails">
+				<list>
+					<value>shankar1@gmail.com</value>
+					<value>shankar2@gmail.com</value>
+					<null />
+				</list>
+		</property>
+		<property name="teacherPhones">
+			<set>
+				<value>234662</value>
+				<value>234555</value>
+			</set>
+		</property>
+		<property name="teacherExperience">
+			<map>
+				<entry key="DAV" value="6"/>
+				<entry key="KV" value="3"/>
+			</map>
+		</property>
+		
+	</bean>
+        
+</beans>
