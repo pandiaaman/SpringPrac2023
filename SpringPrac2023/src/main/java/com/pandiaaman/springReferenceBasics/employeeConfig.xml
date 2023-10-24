@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/beans/spring-context.xsd">
+        
+ 	<bean class="com.pandiaaman.springReferenceBasics.EmployeeAddress" name="addressOne">
+ 		<property name="houseNumber" value="22" />
+ 		<property name="street" value="KR garden"/>
+ 		<property name="pin" value="2345"/>
+ 	</bean>   
+ 	
+ 	<bean class="com.pandiaaman.springReferenceBasics.EmployeeAddress" name="addressTwo">
+ 		<property name="houseNumber" value="707" />
+ 		<property name="street" value="SunTower road"/>
+ 		<property name="pin" value="7845"/>
+ 	</bean> 
+ 	
+ 	<bean class="com.pandiaaman.springReferenceBasics.Employee" name="employeeOne" p:employeeId="1">
+ 		<property name="employeeName" value="Ajay"/>
+ 		<property name="employeeAddress">
+ 			<ref bean="addressOne"/>
+ 		</property>
+ 	</bean>
+ 	
+ 	<bean class="com.pandiaaman.springReferenceBasics.Employee" name="employeeTwo" p:employeeId="2">
+ 		<property name="employeeName" value="Anisha"/>
+ 		<property name="employeeAddress" ref="addressTwo"/>
+ 	</bean>
+ 	
+ 	    
+</beans>
