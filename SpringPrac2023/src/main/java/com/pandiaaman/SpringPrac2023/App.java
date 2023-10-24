@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.pandiaaman.springAnnotationBasics.Vehicle;
 import com.pandiaaman.springBasics.Student;
 import com.pandiaaman.springCollectionBasics.Teacher;
+import com.pandiaaman.springConstructorInjectionBasics.Utensil;
 import com.pandiaaman.springReferenceBasics.Employee;
 
 /**
@@ -44,6 +45,13 @@ public class App
         
         System.out.println(employeeOne);
         System.out.println(employeeTwo);
+        
+        
+        //using constructor injection in spring
+        ApplicationContext contextXML4 = new ClassPathXmlApplicationContext("com/pandiaaman/springConstructorInjectionBasics/utensilConsInjConfig.xml");
+        
+        Utensil utensilOne = contextXML4.getBean("utensilOne", Utensil.class);
+        System.out.println(utensilOne);
         
         //another way of shadowing IOC container is by using AnnotationConfigApplicationContext, that uses annotations 
 //        ApplicationContext contextAnnotation1 = new AnnotationConfigApplicationContext();
